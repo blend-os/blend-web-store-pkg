@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Web Store
+Exec=blend-web-store %U
+Terminal=false
+Type=Application
+Icon=blend-web-store
+StartupWMClass=blend-web-store
+Comment=Web Store for blendOS
+Categories=System;
+Keywords=software;package;add;install;uninstall;remove;update;apps;applications;games;web;

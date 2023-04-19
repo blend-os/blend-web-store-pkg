@@ -2,6 +2,6 @@
 
 !.gitignore
 !PKGBUILD
-!blend-settings
-!blend-settings.desktop
+!blend-web-store
+!blend-web-store.desktop
 !.SRCINFO
