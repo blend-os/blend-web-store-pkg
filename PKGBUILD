@@ -12,7 +12,7 @@ depends=("electron${_electronversion}")
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
 makedepends=("electron${_electronversion}" 'git' 'npm')
-source=('git+https://github.com/blend-os/web-store.git'
+source=('web-store'::'git+file://[BASE_ASSEMBLE_PATH]/projects/blend-web-store'
         'blend-web-store.desktop'
         'blend-web-store')
 sha256sums=('SKIP'
