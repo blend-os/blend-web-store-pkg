@@ -3,15 +3,14 @@
 pkgname='blend-web-store-git'
 pkgver=r12.fa8f99f
 pkgrel=1
-_electronversion=22
 pkgdesc="A web store designed for blendOS"
 arch=('x86_64' 'i686')
 url="https://github.com/blend-os/web-store"
 license=('GPL3')
-depends=("electron${_electronversion}")
+depends=("electron")
 provides=("${pkgname%-git}")
 conflicts=("${pkgname%-git}")
-makedepends=("electron${_electronversion}" 'git' 'npm')
+makedepends=("electron" 'git' 'npm')
 source=('web-store'::'git+file://[BASE_ASSEMBLE_PATH]/projects/blend-web-store'
         'blend-web-store.desktop'
         'blend-web-store')
@@ -34,8 +33,8 @@ build() {
     cd "${srcdir}/web-store"
     npm config set cache "${srcdir}/npm-cache"
     export NODE_ENV=production
-    electronDist="/usr/lib/electron${_electronversion}"
-    electronVer="$(sed s/^v// /usr/lib/electron${_electronversion}/version)"
+    electronDist="/usr/lib/electron"
+    electronVer="$(sed s/^v// /usr/lib/electron/version)"
     npm run icons
     npm run pack -- -c.electronDist=${electronDist} \
         -c.electronVersion=${electronVer} --publish never
